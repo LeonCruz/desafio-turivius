@@ -54,6 +54,7 @@ async def get_book_information(book):
 
 
 def save_book(book):
+    """Função que envia os livros para a api."""
     api_url = "http://localhost:8000/books/"
     response = post(api_url, data=book)
     if response.status_code == 201:
